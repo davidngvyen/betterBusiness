@@ -1,0 +1,83 @@
+* {
+    font-family: 'Courier New', Courier, monospace; /* Sets a universal font for the entire page */
+    margin: 0; /* Removes default margin from all elements */
+    padding: 0; /* Removes default padding from all elements */
+    box-sizing: border-box; /* Ensures that padding and border are included in the element's total width and height */
+}
+
+body, html {
+    width: 100%; /* Sets the width of the body and html to 100% of the viewport */
+    height: 100%; /* Sets the height of the body and html to 100% of the viewport */
+    margin: 0; /* Removes default margin from body and html */
+    padding: 0; /* Removes default padding from body and html */
+}
+
+.container {
+    padding: 10px 10%; /* Adds padding of 10px at the top/bottom and 10% on left/right */
+}
+
+nav {
+    display: flex; /* Enables flexbox for navigation layout */
+    align-items: center; /* Aligns items vertically in the center */
+    justify-content: space-between; /* Spaces out the children evenly with the logo on one side and other elements on the opposite side */
+    flex-wrap: wrap; /* Allows wrapping of flex items if there’s not enough space */
+    min-height: 120px; /* Ensures the nav bar has at least 120px height */
+}
+
+.logo {
+    height: 100px; /* Sets the height of the logo */
+    width: 100px; /* Sets the width of the logo */
+}
+
+nav {
+    position: relative; /* Establishes a relative positioning context for absolutely positioned child elements */
+}
+
+nav h1 {
+    position: absolute; /* Positions the heading h1 element absolutely within its parent (nav) */
+    left: 50%; /* Horizontally positions h1 at 50% of the parent's width */
+    top: 50%; /* Vertically positions h1 at 50% of the parent's height */
+    transform: translate(-50%, -50%); /* Moves the h1 to truly center it in both directions */
+    margin: 0; /* Removes margin from the h1 to avoid additional spacing */
+    color: black; /* Sets the text color to black */
+    font-size: 30px; /* Sets the font size to 30px */
+}
+
+nav ul {
+    display: flex; /* Enables flexbox to arrange list items horizontally */
+    list-style: none; /* Removes default bullet points from the list */
+    margin: 0; /* Removes margin from the unordered list */
+    padding: 0; /* Removes padding from the unordered list */
+}
+
+nav ul li {
+    margin: 10px; /* Adds 10px of margin around each list item to space them out */
+    padding: 0; /* Ensures no extra padding within the list items */
+}
+
+#form-container {
+    display: grid; /* Sets a grid layout for the form container */
+    grid-template-columns: repeat(3, 1fr); /* Defines three equal-width columns for the grid */
+    grid-auto-flow: row dense; /* Automatically places grid items densely, filling in gaps in the grid */
+    gap: 20px; /* Adds 20px of space between grid items */
+    padding: 20px; /* Adds 20px of padding inside the form container */
+}
+
+form {
+    grid-column: 1 / 2; /* Positions the form in the first column of the grid */
+    grid-row: 1 / -1; /* Makes the form span all rows from the first to the last */
+    padding: 20px; /* Adds 20px of padding inside the form */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Adds a light shadow around the form */
+}
+
+.result {
+    background-color: #f9f9f9; /* Sets a light gray background for the result section */
+    border: 1px solid #ccc; /* Adds a light gray border around the result section */
+    padding: 10px; /* Adds 10px of padding inside the result section */
+    box-shadow: 0 0 10px rgba(0,0,0,0.2); /* Adds a shadow with slightly darker intensity than the form */
+    min-height: 100px; /* Ensures the result section has a minimum height of 100px */
+}
+
+h1 {
+    text-align: center; /* Centers the text horizontally */
+}
